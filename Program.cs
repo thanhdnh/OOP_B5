@@ -8,7 +8,19 @@
     h2.NhapHang("Thịt lợn", 50000);
     h1.XuatHoaDon();
     h2.XuatHoaDon();
-    
+
+    //Sao chép sâu nhờ vào IClonable
+    HangDT h3 = (HangDT)(h1 as HangDT).Clone();
+    HangNS h4 = (HangNS)(h2 as HangNS).Clone();
+
+    //So sánh giá 2 mặt hàng nhờ vào IComparable
+    if(h3.CompareTo(h4)>0)
+      Console.WriteLine($"{h3} gia cao hon {h4}");
+    else if(h3.CompareTo(h4)<0)
+      Console.WriteLine("{h3} gia thap hon {h4}");
+    else
+      Console.WriteLine($"{h3} gia bang {h4}");
+
     Console.ReadLine();
   }
 }
