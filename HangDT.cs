@@ -4,7 +4,7 @@ public class HangDT : IHangHoa
     private float gia;
     private float thue;
 
-    public void NhapHang(string ten, float thue, float gia)
+    public void NhapHang(string ten, float gia, float thue)
     {
         this.ten = ten;
         this.gia = gia;
@@ -13,6 +13,6 @@ public class HangDT : IHangHoa
 
     public void XuatHoaDon()
     {
-        Console.Write($"Hang: {ten}, Gia: {gia}, Thue: {thue}");
+        Console.WriteLine($"Hang: {ten}, Gia: {gia}, Thue: {thue}");
     }
 }
