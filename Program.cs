@@ -10,8 +10,8 @@
     h2.XuatHoaDon();
 
     //Sao chép sâu nhờ vào IClonable
-    HangDT h3 = (HangDT)(h1 as HangDT).Clone();
-    HangNS h4 = (HangNS)(h2 as HangNS).Clone();
+    HangDT h3 = (HangDT)((HangDT)h1).Clone();
+    HangNS h4 = (HangNS)((HangNS)h2).Clone();
 
     //So sánh giá 2 mặt hàng nhờ vào IComparable
     if(h3.CompareTo(h4)>0)

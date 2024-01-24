@@ -17,8 +17,8 @@ public class HangDT : IHangHoa, IComparable, ICloneable
 
   public int CompareTo(object obj)
   {
-    float g = (obj as HangDT != null) ? ((obj as HangDT).gia) : ((obj as HangNS).Gia);
-    if (Gia > g)
+    float g = (obj is HangDT) ? ((HangDT)obj).gia : ((HangNS)obj).Gia;
+    if (gia > g)
       return 1;
     else if (gia < g)
       return -1;
